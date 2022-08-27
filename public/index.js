@@ -6,6 +6,15 @@ async function main() {
     books.forEach(renderBook)
 }
 
+async function updateBook(){
+let response = await fetch('http://localhost:3001/updateBook', {
+    method: "PATCH",
+    header: null,
+    body: null,
+});
+
+}
+
 function renderBook(book) {
     let bookContainer = document.querySelector('.book-container')
     bookContainer.innerHTML += `
